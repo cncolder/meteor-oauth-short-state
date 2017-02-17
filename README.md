@@ -12,10 +12,9 @@ meteor add colder:oauth-short-state
 
 ## Improvement:
 
-The origin implement `OAuth._stateParam` like this
+The [source code](https://github.com/meteor/meteor/blob/b8852dd7cc2909be39eab766b57954e225043b68/packages/oauth/oauth_client.js#L41) of `OAuth._stateParam` like this
 
 ```js
-// https://github.com/meteor/meteor/blob/b8852dd7cc2909be39eab766b57954e225043b68/packages/oauth/oauth_client.js#L41
 OAuth._stateParam = function (loginStyle, credentialToken, redirectUrl) {
   var state = {
     loginStyle: loginStyle,
